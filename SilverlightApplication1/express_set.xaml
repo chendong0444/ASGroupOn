@@ -1,0 +1,103 @@
+﻿<navigation:Page x:Class="SilverlightApplication1.express_set" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="700" d:DesignHeight="600"
+           Title="打印设置" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Canvas Height="Auto" Name="canvas1" Width="Auto" Background="#FFB4A1A1" Loaded="canvas1_Loaded">
+        <sdk:TabControl Canvas.Left="6" Canvas.Top="0" Height="100" Name="tabControl1" Width="654" Visibility="Visible">
+            <sdk:TabItem Header="模板大小设置" Name="tabItem1">
+                <Canvas AllowDrop="False">
+                    <sdk:Label Height="28" Name="label1" Width="27" Canvas.Left="16" Canvas.Top="20" Content="宽度" />
+                    <TextBox Height="23" Name="region_width" Width="66" Canvas.Left="41" Canvas.Top="20" Text="881" />
+                    <sdk:Label Height="28" Name="label2" Width="29" Canvas.Left="113" Canvas.Top="18" Content="高度" />
+                    <TextBox Height="23" Name="region_height" Width="70" Canvas.Left="148" Canvas.Top="20" Text="480" />
+                    <Button Content="设置" Height="23" Name="regionset" Width="75" Canvas.Left="349" Canvas.Top="20" Click="regionset_Click" />
+                    <sdk:Label Canvas.Left="231" Canvas.Top="18" Height="28" Name="label4" Width="49" Content="字体" />
+                    <TextBox Canvas.Left="267" Canvas.Top="20" Height="23" Name="textbox_fontsize" Width="54" Text="14" />
+                </Canvas>
+            </sdk:TabItem>
+            <sdk:TabItem Header="上传模板" Name="tabItem2">
+                <Grid>
+                    <sdk:Label Height="18" HorizontalAlignment="Left" Margin="24,16,0,0" Name="upfile_label" VerticalAlignment="Top" Width="180" Content="请点击按钮选择您要上传的模板图片" />
+                    <Button Content="选择" Height="23" HorizontalAlignment="Left" Margin="220,16,0,0" Name="upfile_button" VerticalAlignment="Top" Width="75" Click="upfile_button_Click">
+                        <Button.BorderBrush>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FFA3AEB9" Offset="0" />
+                                <GradientStop Color="#FF8399A9" Offset="0.375" />
+                                <GradientStop Color="#FF718597" Offset="0.375" />
+                                <GradientStop Color="#FF1693F2" Offset="1" />
+                            </LinearGradientBrush>
+                        </Button.BorderBrush>
+                    </Button>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="调整模板" Name="tabItem3">
+                <Canvas Name="canvasselect" Height="65" Width="642" Background="#FF9EB2BE" AllowDrop="True">
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="4" Canvas.Top="5" Height="25" Name="border1" Width="85" Background="#FFF80D0D" AllowDrop="True">
+                        <TextBlock Height="Auto" Name="textBlock1" Text="发货人姓名" TextWrapping="Wrap" FontSize="14" Width="Auto" FontFamily="Portable User Interface" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="356" Canvas.Top="35" Height="25" Name="border2" Width="87" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock2" Text="发货人电话" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="92" Canvas.Top="5" Height="25" Name="border3" Width="84" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock3" Text="发货人单位" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="183" Canvas.Top="5" Height="25" Name="border4" Width="87" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock4" Text="发货人地址" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="281" Canvas.Top="5" Height="25" Name="border5" Width="86" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock5" Text="发货人邮编" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="375" Canvas.Top="6" Height="25" Name="border6" Width="84" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock6" Text="收件人姓名" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="1" Canvas.Left="3" Canvas.Top="35" Height="25" Name="border7" Width="86" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock7" Text="收件人电话" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="92" Canvas.Top="35" Height="25" Name="border8" Width="80" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock8" Text="收件人地址" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="180" Canvas.Top="35" Height="25" Name="border9" Width="78" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock9" Text="收件人邮编" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="266" Canvas.Top="34" Height="25" Name="border10" Width="77" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock10" Text="收件人备注" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="452" Canvas.Top="34" Height="25" Name="border11" Width="83" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock11" Text="发货人备注" TextWrapping="Wrap" FontSize="14" />
+                    </Border>
+                    <Border BorderBrush="Silver" BorderThickness="0" Canvas.Left="473" Canvas.Top="6" Height="25" Name="border12" Width="99" Background="#FFF80D0D">
+                        <TextBlock Height="Auto" Name="textBlock12" Text="订单信息" FontSize="14" TextWrapping="Wrap" />
+                    </Border>
+                </Canvas>
+            </sdk:TabItem>
+            <sdk:TabItem Header="保存" Name="tabItem4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="89*" />
+                        <ColumnDefinition Width="341*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Content="保存当前设置的模板" Height="23" HorizontalAlignment="Left" Margin="114,16,0,0" Name="save_button" VerticalAlignment="Top" Width="115" Grid.Column="1" Click="save_button_Click" />
+                    <TextBox Height="23" Name="template_name" Margin="66,16,0,24" HorizontalAlignment="Left" Width="101" Grid.ColumnSpan="2" />
+                    <sdk:Label Height="23" HorizontalAlignment="Left" Margin="6,20,0,0" Name="label3" VerticalAlignment="Top" Width="54" Content="模板名称" />
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+        <Canvas Canvas.Left="6" Canvas.Top="103" Height="480" Name="canvas2" Width="881" Background="#FF9EB1A7" AllowDrop="True"></Canvas>
+        <Canvas Canvas.Left="42" Canvas.Top="0" Height="94" Name="canvas_printbutton" Width="631" Visibility="Collapsed">
+            <Button Canvas.Left="6" Canvas.Top="6" Content="打   印" Height="50" Name="print_button" Width="146" Visibility="Visible" Click="print_button_Click" />
+            <TextBox Canvas.Left="222" Canvas.Top="19" Height="23" Name="express_no" Width="143" />
+            <sdk:Label Canvas.Left="158" Canvas.Top="17" Height="28" Name="label_express_no" Width="58" Content="快递单号" />
+            <Canvas Canvas.Left="430" Canvas.Top="16" Height="72" Name="canvasprintmode" Width="188" Visibility="Collapsed">
+                <RadioButton Canvas.Left="94" Canvas.Top="9" Content="自动连续打印" Height="16" Name="autoprint" />
+                <TextBlock Canvas.Left="6" Canvas.Top="23" Height="49" Name="textBlock13" Text="自动打印时浏览器可能会出现假死现象,请不要关闭,打印完毕后会恢复正常" TextWrapping="Wrap" Width="176" />
+                <RadioButton Canvas.Left="6" Canvas.Top="6" Content="手动连续打印" Height="16" Name="noautoprint" IsChecked="True" />
+            </Canvas>
+            <sdk:Label Canvas.Left="377" Canvas.Top="16" Height="25" Name="label_orders" Width="34" />
+        </Canvas>
+    </Canvas>
+</navigation:Page>

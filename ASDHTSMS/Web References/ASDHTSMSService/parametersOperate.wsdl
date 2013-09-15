@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://sms.asdht.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://sms.asdht.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://sms.asdht.com/">
+      <s:element name="SelectCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectCreditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receivephone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendSMSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendlogSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendlogSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendlogSelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendlogSelectByWhere">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iPageIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="begintime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endtime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendlogSelectByWhereResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendlogSelectByWhereResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHtmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ASSMSUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ASSMSUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ASSMSUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SelectCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectCredit" />
+  </wsdl:message>
+  <wsdl:message name="SelectCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendlogSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:SendlogSelect" />
+  </wsdl:message>
+  <wsdl:message name="SendlogSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:SendlogSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendlogSelectByWhereSoapIn">
+    <wsdl:part name="parameters" element="tns:SendlogSelectByWhere" />
+  </wsdl:message>
+  <wsdl:message name="SendlogSelectByWhereSoapOut">
+    <wsdl:part name="parameters" element="tns:SendlogSelectByWhereResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHtml" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHtmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ASSMSUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ASSMSUser" />
+  </wsdl:message>
+  <wsdl:message name="ASSMSUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ASSMSUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="parametersOperateSoap">
+    <wsdl:operation name="SelectCredit">
+      <wsdl:input message="tns:SelectCreditSoapIn" />
+      <wsdl:output message="tns:SelectCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendlogSelect">
+      <wsdl:input message="tns:SendlogSelectSoapIn" />
+      <wsdl:output message="tns:SendlogSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendlogSelectByWhere">
+      <wsdl:input message="tns:SendlogSelectByWhereSoapIn" />
+      <wsdl:output message="tns:SendlogSelectByWhereSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHtml">
+      <wsdl:input message="tns:GetHtmlSoapIn" />
+      <wsdl:output message="tns:GetHtmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ASSMSUser">
+      <wsdl:input message="tns:ASSMSUserSoapIn" />
+      <wsdl:output message="tns:ASSMSUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="parametersOperateSoap" type="tns:parametersOperateSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectCredit">
+      <soap:operation soapAction="http://sms.asdht.com/SelectCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://sms.asdht.com/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendlogSelect">
+      <soap:operation soapAction="http://sms.asdht.com/SendlogSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendlogSelectByWhere">
+      <soap:operation soapAction="http://sms.asdht.com/SendlogSelectByWhere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHtml">
+      <soap:operation soapAction="http://sms.asdht.com/GetHtml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ASSMSUser">
+      <soap:operation soapAction="http://sms.asdht.com/ASSMSUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="parametersOperateSoap12" type="tns:parametersOperateSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectCredit">
+      <soap12:operation soapAction="http://sms.asdht.com/SelectCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://sms.asdht.com/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendlogSelect">
+      <soap12:operation soapAction="http://sms.asdht.com/SendlogSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendlogSelectByWhere">
+      <soap12:operation soapAction="http://sms.asdht.com/SendlogSelectByWhere" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHtml">
+      <soap12:operation soapAction="http://sms.asdht.com/GetHtml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ASSMSUser">
+      <soap12:operation soapAction="http://sms.asdht.com/ASSMSUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="parametersOperate">
+    <wsdl:port name="parametersOperateSoap" binding="tns:parametersOperateSoap">
+      <soap:address location="http://sms.asdht.com/parametersOperate.asmx" />
+    </wsdl:port>
+    <wsdl:port name="parametersOperateSoap12" binding="tns:parametersOperateSoap12">
+      <soap12:address location="http://sms.asdht.com/parametersOperate.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

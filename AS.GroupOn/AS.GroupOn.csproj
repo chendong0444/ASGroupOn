@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9E0C513-7602-4E08-853B-16A8510E8DB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AS.GroupOn</RootNamespace>
+    <AssemblyName>AS.GroupOn</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBatisNet.Common">
+      <HintPath>..\DLL\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\DLL\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\Store.cs" />
+    <Compile Include="DataAccess\Accessor\IAdjunctAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IAreaAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IAskAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IAuthorAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IAuthorityAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IBranchAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IBrandAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICardAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICatalogsAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICategoryAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICityAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICouponAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICpsAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ICustomAccessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Accessor\IDrawAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IExpressnocitysAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IExpresspriceAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IFarecitysAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IFeedbackAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IFlowAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IFriendLinkAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IGetDataAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IGuidAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IInventorylogAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IInviteAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ILocationAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IMailerAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IMailserverAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ImailserviceproviderAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IMailtasksAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IMailtasksFilter.cs" />
+    <Compile Include="DataAccess\Accessor\IMenuAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IMenuRelationAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\INewsAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IOprationLogAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IOrderAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IOrderDetailAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IPacketAccessor.cs.cs" />
+    <Compile Include="DataAccess\Accessor\IPageAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IPartner_DetailAccessor.cs.cs" />
+    <Compile Include="DataAccess\Accessor\IPayAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IPcouponAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IProductAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IPromotion_rulesAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IRefundsAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IRefunds_detailAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IRoleAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IRoleAuthorityAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISalesAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISales_promotionAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IScorelogAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISmssubscribeAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISmssubscribedetailAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISmstemplateAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISubscribeAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISystemAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ITeamAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ITemplate_printAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ITopicAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IUserAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IPartnerAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IUserlevelrelusAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IUserReivewAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IFareTemplateAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IVote_FeedbackAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IVote_Feedback_InputAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IVote_Feedback_QuestionAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IVote_OptionsAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IVote_QuestionAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\IYizhantongAccessor.cs" />
+    <Compile Include="DataAccess\Accessor\ISmsLogAccessor.cs" />
+    <Compile Include="DataAccess\Filters\AdjunctFilter.cs" />
+    <Compile Include="DataAccess\Filters\AreaFilter.cs" />
+    <Compile Include="DataAccess\Filters\AskFilter.cs" />
+    <Compile Include="DataAccess\Filters\AuthorFilter.cs" />
+    <Compile Include="DataAccess\Filters\AuthorityFilter.cs" />
+    <Compile Include="DataAccess\Filters\BranchFilter.cs" />
+    <Compile Include="DataAccess\Filters\BrandFilter.cs" />
+    <Compile Include="DataAccess\Filters\CardFilter.cs" />
+    <Compile Include="DataAccess\Filters\CatalogsFilter.cs" />
+    <Compile Include="DataAccess\Filters\CategoryFilter.cs" />
+    <Compile Include="DataAccess\Filters\CityFilter.cs" />
+    <Compile Include="DataAccess\Filters\CouponFilter.cs" />
+    <Compile Include="DataAccess\Filters\CpsFilter.cs" />
+    <Compile Include="DataAccess\Filters\DrawFilter.cs" />
+    <Compile Include="DataAccess\Filters\ExpressnocitysFilter.cs" />
+    <Compile Include="DataAccess\Filters\ExpresspriceFilter.cs" />
+    <Compile Include="DataAccess\Filters\FarecitysFilter.cs" />
+    <Compile Include="DataAccess\Filters\FareTemplateFilter.cs" />
+    <Compile Include="DataAccess\Filters\FeedbackFilter.cs" />
+    <Compile Include="DataAccess\Filters\FilterBase.cs" />
+    <Compile Include="DataAccess\Filters\FlowFilter.cs" />
+    <Compile Include="DataAccess\Filters\FriendLinkFilter.cs" />
+    <Compile Include="DataAccess\Filters\GuidFilter.cs" />
+    <Compile Include="DataAccess\Filters\InventorylogFilter.cs" />
+    <Compile Include="DataAccess\Filters\InviteFilter.cs" />
+    <Compile Include="DataAccess\Filters\LocationFilter.cs" />
+    <Compile Include="DataAccess\Filters\MailerFilter.cs" />
+    <Compile Include="DataAccess\Filters\MailserverFilter.cs" />
+    <Compile Include="DataAccess\Filters\MailserviceproviderFilter.cs" />
+    <Compile Include="DataAccess\Filters\MailtasksFilter.cs" />
+    <Compile Include="DataAccess\Filters\MenuFilter.cs" />
+    <Compile Include="DataAccess\Filters\MenuRelationFilter.cs" />
+    <Compile Include="DataAccess\Filters\NewsFilter.cs" />
+    <Compile Include="DataAccess\Filters\OprationLogFilter.cs" />
+    <Compile Include="DataAccess\Filters\OrderDetailFilter.cs" />
+    <Compile Include="DataAccess\Filters\OrderFilter.cs" />
+    <Compile Include="DataAccess\Filters\PacketFilter.cs" />
+    <Compile Include="DataAccess\Filters\PageFilter.cs" />
+    <Compile Include="DataAccess\Filters\Partner_DetailFilter.cs" />
+    <Compile Include="DataAccess\Filters\PayFilter.cs" />
+    <Compile Include="DataAccess\Filters\PcouponFilter.cs" />
+    <Compile Include="DataAccess\Filters\ProductFilter.cs" />
+    <Compile Include="DataAccess\Filters\Promotion_rulesFilter.cs" />
+    <Compile Include="DataAccess\Filters\PropValueFilter.cs" />
+    <Compile Include="DataAccess\Filters\RefundsFilter.cs" />
+    <Compile Include="DataAccess\Filters\Refunds_detailFilter.cs" />
+    <Compile Include="DataAccess\Filters\RoleAuthorityFilter.cs" />
+    <Compile Include="DataAccess\Filters\RoleFilter.cs" />
+    <Compile Include="DataAccess\Filters\SalesFilter.cs" />
+    <Compile Include="DataAccess\Filters\Sales_promotionFilter.cs" />
+    <Compile Include="DataAccess\Filters\ScorelogFilter.cs" />
+    <Compile Include="DataAccess\Filters\SmssubscribedetailFilter.cs" />
+    <Compile Include="DataAccess\Filters\SmssubscribeFilter.cs" />
+    <Compile Include="DataAccess\Filters\SmstemplateFilter.cs" />
+    <Compile Include="DataAccess\Filters\SubscribeFilter.cs" />
+    <Compile Include="DataAccess\Filters\SystemFilter.cs" />
+    <Compile Include="DataAccess\Filters\TeamFilter.cs" />
+    <Compile Include="DataAccess\Filters\Template_printFilter.cs" />
+    <Compile Include="DataAccess\Filters\TopicFilter.cs" />
+    <Compile Include="DataAccess\Filters\UserFilter.cs" />
+    <Compile Include="DataAccess\Filters\PartnerFilter.cs" />
+    <Compile Include="DataAccess\Filters\UserlevelrulesFilters.cs" />
+    <Compile Include="DataAccess\Filters\UserReviewFilter.cs" />
+    <Compile Include="DataAccess\Filters\Vote_FeedbackFilters.cs" />
+    <Compile Include="DataAccess\Filters\Vote_Feedback_InputFilters.cs" />
+    <Compile Include="DataAccess\Filters\Vote_Feedback_QuestionFilters.cs" />
+    <Compile Include="DataAccess\Filters\Vote_OptionsFilters.cs" />
+    <Compile Include="DataAccess\Filters\Vote_QuestionFilters.cs" />
+    <Compile Include="DataAccess\Filters\YizhantongFilters.cs" />
+    <Compile Include="DataAccess\Filters\SmsLogFilter.cs" />
+    <Compile Include="DataAccess\IDataSession.cs" />
+    <Compile Include="DataAccess\SqlBat\AskBat.cs" />
+    <Compile Include="Domain\IAdjunct.cs" />
+    <Compile Include="Domain\Cart.cs" />
+    <Compile Include="Domain\IArea.cs" />
+    <Compile Include="Domain\IAuthor.cs" />
+    <Compile Include="Domain\IBranch.cs" />
+    <Compile Include="Domain\IBrand.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Domain\ICategory.cs" />
+    <Compile Include="Domain\ICity.cs" />
+    <Compile Include="Domain\IExpressprice.cs" />
+    <Compile Include="DataAccess\Spi\Mapper.cs" />
+    <Compile Include="DataAccess\Spi\Pagers.cs" />
+    <Compile Include="DataAccess\Spi\PagersHelper.cs" />
+    <Compile Include="Domain\IAsk.cs" />
+    <Compile Include="Domain\ICard.cs" />
+    <Compile Include="Domain\ICatalogs.cs" />
+    <Compile Include="Domain\ICoupon.cs" />
+    <Compile Include="Domain\ICps.cs" />
+    <Compile Include="Domain\IDraw.cs" />
+    <Compile Include="Domain\IExpressnocitys.cs" />
+    <Compile Include="Domain\IFarecitys.cs" />
+    <Compile Include="Domain\IFareTemplate.cs" />
+    <Compile Include="Domain\IFeedback.cs" />
+    <Compile Include="Domain\IFlow.cs" />
+    <Compile Include="Domain\IFriendLink.cs" />
+    <Compile Include="Domain\IGuid.cs" />
+    <Compile Include="Domain\Iinventorylog.cs" />
+    <Compile Include="Domain\IInvite.cs" />
+    <Compile Include="Domain\ILocation.cs" />
+    <Compile Include="Domain\IMailer.cs" />
+    <Compile Include="Domain\IMailserver.cs" />
+    <Compile Include="Domain\Imailserviceprovider.cs" />
+    <Compile Include="Domain\IMailtasks.cs" />
+    <Compile Include="Domain\IMenu.cs" />
+    <Compile Include="Domain\IMenuRelation.cs" />
+    <Compile Include="Domain\INews.cs" />
+    <Compile Include="Domain\IObj.cs" />
+    <Compile Include="Domain\IOprationLog.cs" />
+    <Compile Include="Domain\IOrder.cs" />
+    <Compile Include="Domain\IOrderDetail.cs" />
+    <Compile Include="Domain\IPacket.cs" />
+    <Compile Include="Domain\IPage.cs" />
+    <Compile Include="Domain\IPartner_Detail.cs" />
+    <Compile Include="Domain\IPay.cs" />
+    <Compile Include="Domain\IPcoupon.cs" />
+    <Compile Include="Domain\IProduct.cs" />
+    <Compile Include="Domain\IPromotion_rules.cs" />
+    <Compile Include="Domain\IRefunds.cs" />
+    <Compile Include="Domain\IRefunds_detail.cs" />
+    <Compile Include="Domain\IRole.cs" />
+    <Compile Include="Domain\IRoleAuthority.cs" />
+    <Compile Include="Domain\ISale.cs" />
+    <Compile Include="Domain\ISales.cs" />
+    <Compile Include="Domain\ISales_promotion.cs" />
+    <Compile Include="Domain\IScorelog.cs" />
+    <Compile Include="Domain\ISmssubscribe.cs" />
+    <Compile Include="Domain\ISmssubscribedetail.cs" />
+    <Compile Include="Domain\ISmstemplate.cs" />
+    <Compile Include="Domain\ISubscribe.cs" />
+    <Compile Include="Domain\ISystem.cs" />
+    <Compile Include="Domain\ITeam.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\ITemplate_print.cs" />
+    <Compile Include="Domain\ITopic.cs" />
+    <Compile Include="Domain\IUser.cs" />
+    <Compile Include="Domain\IPagers.cs" />
+    <Compile Include="Domain\IPartner.cs" />
+    <Compile Include="Domain\IUserlevelrules.cs" />
+    <Compile Include="Domain\IUserReview.cs" />
+    <Compile Include="Domain\IVote_Feedback.cs" />
+    <Compile Include="Domain\IVote_Feedback_Input.cs" />
+    <Compile Include="Domain\IVote_Feedback_Question.cs" />
+    <Compile Include="Domain\IVote_Options.cs" />
+    <Compile Include="Domain\IVote_Question.cs" />
+    <Compile Include="Domain\IYizhantong.cs" />
+    <Compile Include="Domain\Spi\Adjunct.cs" />
+    <Compile Include="Domain\Spi\Area.cs" />
+    <Compile Include="Domain\Spi\Ask.cs" />
+    <Compile Include="Domain\Spi\Author.cs" />
+    <Compile Include="Domain\Spi\Authority.cs" />
+    <Compile Include="Domain\Spi\Branch.cs" />
+    <Compile Include="Domain\Spi\Brand.cs" />
+    <Compile Include="Domain\Spi\Card.cs" />
+    <Compile Include="Domain\Spi\Catalogs.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Domain\Spi\Category.cs" />
+    <Compile Include="Domain\Spi\City.cs" />
+    <Compile Include="Domain\Spi\Coupon.cs" />
+    <Compile Include="Domain\Spi\Cps.cs" />
+    <Compile Include="Domain\Spi\Draw.cs" />
+    <Compile Include="Domain\Spi\Expressnocitys.cs" />
+    <Compile Include="Domain\Spi\Expressprice.cs" />
+    <Compile Include="Domain\Spi\Farecitys.cs" />
+    <Compile Include="Domain\Spi\FareTemplate.cs" />
+    <Compile Include="Domain\Spi\Feedback.cs" />
+    <Compile Include="Domain\Spi\Flow.cs" />
+    <Compile Include="Domain\Spi\FriendLink.cs" />
+    <Compile Include="Domain\Spi\Guid.cs" />
+    <Compile Include="Domain\Spi\inventorylog.cs" />
+    <Compile Include="Domain\Spi\Invite.cs" />
+    <Compile Include="Domain\Spi\key.cs" />
+    <Compile Include="Domain\Spi\Location.cs" />
+    <Compile Include="Domain\Spi\Mailer.cs" />
+    <Compile Include="Domain\Spi\Mailserver.cs" />
+    <Compile Include="Domain\Spi\Mailserviceprovider.cs" />
+    <Compile Include="Domain\Spi\Mailtasks.cs" />
+    <Compile Include="Domain\Spi\Menu.cs" />
+    <Compile Include="Domain\Spi\MenuRelation.cs" />
+    <Compile Include="Domain\Spi\News.cs" />
+    <Compile Include="Domain\Spi\Obj.cs" />
+    <Compile Include="Domain\Spi\OprationLog.cs" />
+    <Compile Include="Domain\Spi\Order.cs" />
+    <Compile Include="Domain\Spi\OrderDetail.cs" />
+    <Compile Include="Domain\Spi\Packet.cs" />
+    <Compile Include="Domain\Spi\Page.cs" />
+    <Compile Include="Domain\Spi\Partner_Detail.cs" />
+    <Compile Include="Domain\Spi\Pay.cs" />
+    <Compile Include="Domain\Spi\Pcoupon.cs" />
+    <Compile Include="Domain\Spi\Product.cs" />
+    <Compile Include="Domain\Spi\Promotion_rules.cs" />
+    <Compile Include="Domain\Spi\Refunds.cs" />
+    <Compile Include="Domain\Spi\Refunds_detail.cs" />
+    <Compile Include="Domain\Spi\Role.cs" />
+    <Compile Include="Domain\Spi\RoleAuthority.cs" />
+    <Compile Include="Domain\Spi\Sales.cs" />
+    <Compile Include="Domain\Spi\Sales_promotion.cs" />
+    <Compile Include="Domain\Spi\Scorelog.cs" />
+    <Compile Include="Domain\Spi\Smssubscribe.cs" />
+    <Compile Include="Domain\Spi\Smssubscribedetail.cs" />
+    <Compile Include="Domain\Spi\Smstemplate.cs" />
+    <Compile Include="Domain\Spi\Subscribe.cs" />
+    <Compile Include="Domain\Spi\Systems.cs" />
+    <Compile Include="Domain\Spi\Team.cs" />
+    <Compile Include="Domain\Spi\Template_print.cs" />
+    <Compile Include="Domain\Spi\Topic.cs" />
+    <Compile Include="Domain\Spi\User.cs" />
+    <Compile Include="Domain\Spi\Partner.cs" />
+    <Compile Include="Domain\Spi\Userlevelrules.cs" />
+    <Compile Include="Domain\Spi\UserReview.cs" />
+    <Compile Include="Domain\Spi\Vote_Feedback.cs" />
+    <Compile Include="Domain\Spi\Vote_Feedback_Input.cs" />
+    <Compile Include="Domain\Spi\Vote_Feedback_Question.cs" />
+    <Compile Include="Domain\Spi\Vote_Options.cs" />
+    <Compile Include="Domain\Spi\Vote_Question.cs" />
+    <Compile Include="Domain\Spi\Yizhantong.cs" />
+    <Compile Include="Domain\IAuthorityr.cs" />
+    <Compile Include="Domain\ISmsLog.cs" />
+    <Compile Include="Domain\Spi\SmsLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AS.Common\AS.Common.csproj">
+      <Project>{3423415B-F604-4557-BAAD-88587CAB2470}</Project>
+      <Name>AS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\mybatis\mssql\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\Spi\DataSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mybatis\mssql\AdjunctMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\AreaMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\AskMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\AuthorityMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\AuthorMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\BranchMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\BrandMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\CardMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\CatalogsMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\CategoryMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\CityMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\CouponMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\CpsMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\CustomMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\DataMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\DrawMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\ExpressnocitysMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\ExpresspriceMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\FarecitysMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\FareTemplateMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\FeedbackMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\FlowMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\FriendLinkMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\GetDataMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\GuidMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\InventorylogMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\InviteMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\LocationMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\MailerMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\MailserverMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\MailserviceproviderMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\MailtasksMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\MenuMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\MenuRelationMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\NewsMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\OprationLogMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\OrderDetailMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\OrderMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\PacketMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\PageMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\PartnerMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\Partner_DetailMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\PayMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\PcouponMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\ProductMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\Promotion_rulesMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\providers.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\RefundsMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\Refunds_detailMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\RoleAuthorityMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\RoleMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\SalesMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\Sales_promotionMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\ScorelogMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\SmssubscribedetailMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\SmssubscribeMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\SmstemplateMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\SqlMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\SubscribeMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\SystemMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\TeamMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\Template_printMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\TopicMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\UserlevelrulesMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\UserMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\UserReviewMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mybatis\mssql\Vote_FeedbackMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\Vote_Feedback_InputMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\Vote_Feedback_QuestionMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\Vote_OptionsMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\Vote_QuestionMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mybatis\mssql\YizhantongMap.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
