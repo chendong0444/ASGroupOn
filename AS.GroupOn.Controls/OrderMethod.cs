@@ -1763,14 +1763,9 @@ namespace AS.GroupOn.Controls
             ISystem sysmodel = GetModelByCache(1);
             WebUtils.LogWrite("message", content);
             if (sysmodel.smsuser == String.Empty || sysmodel.smspass == String.Empty) return false;
-            string mobile = String.Empty;
-            for (int i = 0; i < mobiles.Count; i++)
-            {
-                mobile = mobile + "," + mobiles[i];
-            }
-            if (mobile != String.Empty) mobile = mobile.Substring(1);
-            if (mobile != String.Empty)
-                ok = EmailMethod.SendSms(sysmodel.smsuser, sysmodel.smspass, mobile, content);
+            if (mobiles.Count>0)
+                ok = ChinaNetSMSWraper.SendSMS(mobiles, content);
+                //ok = EmailMethod.SendSms(sysmodel.smsuser, sysmodel.smspass, mobile, content);
             return ok;
         }
         #endregion
