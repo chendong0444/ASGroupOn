@@ -459,7 +459,7 @@ namespace AS.GroupOn.Controls
             if (t.End_time < DateTime.Now)//结束时间小于当前时间，结束时间已过
             {
                 //项目已结束，并且当前购买人数，并且已卖光状态
-                if ((t.Now_number >= t.Max_number && t.Max_number != 0 && t.Now_number != 0) || (Helper.GetInt(t.open_invent, 0) == 1 && Helper.GetInt(t.inventory, 0) == 0) || t.State == "8")
+                if ((t.Now_number >= t.Max_number && t.Max_number != 0 && t.Now_number != 0) || (Helper.GetInt(t.open_invent, 0) == 1 && Helper.GetInt(t.inventory, 0) == 0) || t.status == 8)
                 {
                     return AS.Enum.TeamState.successnobuy; //已结束不可以购买已卖光
                 }
@@ -479,7 +479,7 @@ namespace AS.GroupOn.Controls
             else if (DateTime.Now <= t.End_time)//当前时间小于等于项目结束时间
             {
 
-                if ((t.Now_number >= t.Max_number && t.Max_number != 0 && t.Now_number != 0) || (Helper.GetInt(t.open_invent, 0) == 1 && Helper.GetInt(t.inventory, 0) == 0) || t.State == "8")
+                if ((t.Now_number >= t.Max_number && t.Max_number != 0 && t.Now_number != 0) || (Helper.GetInt(t.open_invent, 0) == 1 && Helper.GetInt(t.inventory, 0) == 0) || t.status == 8)
                 {
 
                     return AS.Enum.TeamState.successnobuy; //已成功未过期不可以购买已卖光
